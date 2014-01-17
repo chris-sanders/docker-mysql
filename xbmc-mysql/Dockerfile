@@ -11,8 +11,8 @@ RUN /add_xbmc_user.sh
 # Save configuration to allow local volume mounting
 RUN cp -al /var/lib/mysql /var/lib/mysql-bak
 
+# If mysql DB is empty initialize with backed up values
 ENTRYPOINT ["/init_db.sh"]
 
-#CMD ["/init_db.sh"]
 CMD ["mysqld"]
 
