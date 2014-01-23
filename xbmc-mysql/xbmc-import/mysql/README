@@ -1,0 +1,1 @@
+Place databaes from /var/lib/mysql/[dbname] into this folder to have them built into an image.
