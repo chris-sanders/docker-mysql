@@ -1,7 +1,10 @@
 FROM csanders/mysql
 MAINTAINER Chris Sanders <sanders.chris@gmail.com>
 
-ADD my.cnf /etc/mysql/my.cnf
+# Change bind address to 0.0.0.0
+RUN sed -ri 's/^(bind-address\s*=\s*)([0-9\.]+)/\10.0.0.0/g' /etc/mysql/my.cnf
+
+# Add setup scripts
 ADD add_xbmc_user.sh /add_xbmc_user.sh
 ADD init_db.sh /init_db.sh
 
