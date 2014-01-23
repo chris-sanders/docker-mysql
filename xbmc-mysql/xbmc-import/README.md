@@ -10,9 +10,9 @@ sudo docker build csanders/xbmc-import
 ```
 
 # Database
-To add previous databases to this image simply place them in the "xbmc" folder before building.  You can copy the necessary folders out of previous container with the docker cp command.
+To add existing databases to this image place them in the "mysql" folder before building.  You can copy the necessary folders out of a container with the docker cp command.
 ```
-sudo docker cp <xbmc-mysql-container>:/var/lib/mysql ./xbmc
+sudo docker cp <xbmc-mysql-container>:/var/lib/mysql ./mysql
 ```
 Only the MyVideos* and MyMusic* databases are needed, you can delete the other files before building to save space.  This image will preserve the default xbmc-mysql settings from the source image so deleting extra files are not required.
 
