@@ -1,5 +1,5 @@
 FROM csanders/xbmc-mysql
-MAINTAINER Chris Sanders <sanders.chris@gmail.com>
+MAINTAINER Chris Sanders 
 
 # Copy in the /var/lib/mysql folder from a previous install
 ADD ./mysql/ /var/lib/mysql-import/

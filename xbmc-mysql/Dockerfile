@@ -1,5 +1,5 @@
 FROM csanders/mysql
-MAINTAINER Chris Sanders <sanders.chris@gmail.com>
+MAINTAINER Chris Sanders 
 
 # Change bind address to 0.0.0.0
 RUN sed -ri 's/^(bind-address\s*=\s*)([0-9\.]+)/\10.0.0.0/g' /etc/mysql/my.cnf

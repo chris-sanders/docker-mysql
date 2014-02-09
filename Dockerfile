@@ -1,5 +1,5 @@
 FROM csanders/base
-MAINTAINER Chris Sanders <sanders.chris@gmail.com>
+MAINTAINER Chris Sanders 
 
 RUN apt-get install -y mysql-server
 
